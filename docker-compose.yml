@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+  grafana:
+    image: teslawallconnector/grafana:latest
+    container_name: grafana
+    build: grafana/
+    restart: always
+    links:
+      - prometheus
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${CONNECTOR_ROOT}/data/grafana:/var/lib/grafana
+
+  prometheus:
+    image: teslawallconnector/prometheus:latest
+    container_name: prometheus
+    build: prometheus/
+    restart: always
+    links:
+      - connector
+    ports:
+      - "9090:9090"
+    volumes:
+      - ${CONNECTOR_ROOT}/data/prometheus:/prometheus
+
+  connector:
+    image: teslawallconnector/connector:latest
+    container_name: connector
+    build: connector/
+    restart: always
+    ports:
+      - "9225:9225"
