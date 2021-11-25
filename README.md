@@ -2,6 +2,8 @@
 
 This project builds upon [fynn.sh's TeslaWallConnector exporter](https://github.com/fynnsh/teslawallconnector-exporter), which itself is based on [Marc Sowen's work](https://github.com/marcsowen/teslawallconnector-exporter).
 
+![Tesla Wall Connector Dashboard](teslawallconnector.png)
+
 The aim was to create a simple setup for everybody to get started monitoring his / her own Tesla Gen3 Wall Connector, i.e. setting up the Python proxy server "connector" to translate Tesla's API data into a format consumable by [Prometheus](https://prometheus.io/), setting up Prometheus and finally [Grafana](https://grafana.com/) itself and starting with a pre-configured Dashboard.
 
 Right now the configuration is still spread across different files:
