@@ -24,6 +24,8 @@ The services should then be available at
 * Prometheus: http://localhost:9090
 * Grafana: http://localhost:3000
 
+The initial login for Grafana is "admin" / "admin" (without quotes). After you entered these you're prompted to set up new credentials. The preconfigured Dashboard should afterwards be reachable via http://localhost:3000/d/6gOK9dzga/tesla-wall-connector?orgId=1.
+
 This setup is, as of now, only tested on a Synology NAS. You need their [Docker package](https://www.synology.com/en-global/dsm/packages/Docker) and a root ssh login to set this project up.
 
 Have fun
