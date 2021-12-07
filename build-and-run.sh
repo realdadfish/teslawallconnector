@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 export CONNECTOR_ROOT="/volume1/teslawallconnector"
 
